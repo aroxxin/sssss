@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expensive</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: "Press Start 2P", monospace, Arial, sans-serif;
+            background: radial-gradient(circle, #ff8c00, #ff4500, #8b0000);
+            color: #ffcc00;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            background: #331a00;
+            padding: 20px 0;
+            border-bottom: 3px solid #ffcc00;
+            text-shadow: 0 0 5px #ffcc00;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Navigation bar */
+        nav {
+            background: #552200;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            border-bottom: 3px solid #ffcc00;
+        }
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+        nav a:hover {
+            color: white;
+            text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00;
+        }
+
+        /* Section styles */
+        section {
+            padding: 20px;
+            text-align: center;
+            min-height: calc(100vh - 180px); /* Header + footer */
+        }
+        #home {
+            display: block;
+        }
+        #download {
+            display: none;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #331a00;
+            color: #ffcc00;
+            border-top: 3px solid #ffcc00;
+            font-size: 0.8rem;
+        }
+
+        /* Button styles */
+        button {
+            font-size: 1rem;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: black;
+            border: 2px solid #ffcc00;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background: black;
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+    </style>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Expensive</h1>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <a href="#home" onclick="showSection('home')">Home</a>
+        <a href="#download" onclick="showSection('download')">Download</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Expensive</h2>
+        <p>To strona serwera "147.185.221.194:36739". Tu będą aktualności.</p>
+		<a>Pobierz naszom paczkę Modów w zakładce downolad.</a>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download">
+        <h2>Download Mod Pack 1</h2>
+        <p>Kliknij poniżej, aby pobrać najnowszą paczkę modyfikacji!</p>
+		<a href="2.zip" download.2>
+            <button>Pobierz Paczkę 2</button>
+        </a>
+		
+		<h2>Download Mod Pack 2</h2>
+        <p>Kliknij poniżej, aby pobrać najnowszą paczkę modyfikacji!</p>
+		<a href="1.zip" download.1>
+            <button>Pobierz Paczkę 1</button>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; Marcin Jezior - Prawa autorskie Zastżerzone.
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function showSection(sectionId) {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("download").style.display = "none";
+            document.getElementById(sectionId).style.display = "block";
+        }
+    </script>
+</body>
+</html>
